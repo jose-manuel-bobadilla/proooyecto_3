@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gestor de Eventos</h1>
+
+    <!-- Formulario para Crear y Actualizar Eventos -->
+    <div class="form-container">
+        <form id="event-form">
+            <input type="hidden" id="event-id">
+            <div class="form-group">
+                <label for="nombre">Nombre del Evento</label>
+                <input type="text" id="nombre" placeholder="Ej: Concierto de Rock" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="text" id="fecha" placeholder="Ej: 2025-12-31" required>
+            </div>
+            <div class="form-group">
+                <label for="lugar">Lugar</label>
+                <input type="text" id="lugar" placeholder="Ej: Estadio Nacional" required>
+            </div>
+            <div class="form-group">
+                <label for="precioBase">Precio Base</label>
+                <input type="number" id="precioBase" step="0.01" placeholder="Ej: 50.00" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" placeholder="Ej: Disponible" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" id="btn-save">Guardar</button>
+                <button type="button" id="btn-clear">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Tabla para Listar Eventos -->
+    <div class="table-container">
+        <h2>Lista de Eventos</h2>
+        <table id="events-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Lugar</th>
+                <th>Precio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Las filas de eventos se insertarán aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
